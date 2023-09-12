@@ -1,11 +1,13 @@
 {
   "name": "hw10",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "directories": {
     "example": "examples",
     "lib": "lib"
+  
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

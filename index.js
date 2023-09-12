@@ -1,6 +1,6 @@
-const fs = require('fs')
-const inquirer = require('inquirer')
-const {Triangle, Square, Circle} = require("./lib/shapes")
+import inquirer from 'inquirer'
+// import fs from 'fs'
+// import { Triangle, Square, Circle } from "./lib/shapes"
 
 
 
@@ -32,3 +32,14 @@ const questions = [
     }
 ]
 
+function init() {
+    inquirer.prompt(questions).then((responses) =>{
+        if(responses.text.length > 3){
+            console.log("Please choose no more than 3 characters for your text")
+        } else {
+            writeToFile("logo.svg",responses)
+        }
+        
+    })
+}
+init()
