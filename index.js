@@ -1,6 +1,7 @@
 const fs = require('fs')
 const inquirer = require('inquirer')
-const { default: CheckboxPrompt } = require('inquirer/lib/prompts/checkbox')
+const {Triangle, Square, Circle} = require("./lib/shapes")
+
 
 
 
@@ -30,3 +31,4 @@ const questions = [
         message: 'What color would you like your text to be? Type the name of a color or a hexadecimal code.'
     }
 ]
+
