@@ -1,5 +1,7 @@
+// import { prompt } from 'inquirer';
 import inquirer from 'inquirer'
-import fs from 'fs'
+import { writeFile } from 'fs';
+// import fs from 'fs'
 import Shapes from "./lib/shapes.js";
 
 const { Triangle, Square, Circle } = Shapes;
@@ -33,7 +35,7 @@ function writeToFile(fileName, responses){
   svgInput += "</svg>";
 
   
-  fs.writeFile(fileName, svgInput, (err) => {
+  writeFile(fileName, svgInput, (err) => {
     err ? console.log(err) : console.log("Generated logo.svg");
   });
 
