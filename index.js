@@ -25,8 +25,17 @@ function writeToFile(fileName, responses){
         shapeChoice = new Triangle()
         svgInput += `<polygon points="150, 18 244, 182 56, 182" fill="${responses.bgColor}"/>`
     }
-    
-    
+    // initializes the text 
+    svgInput+= `<text x="150" y="130" text-anchor="middle" font-size="40" fill="${responses.textColor}">${responses.text}</text>`;
+ 
+  svgInput += "</g>";
+  
+  svgInput += "</svg>";
+
+  
+  fs.writeFile(fileName, svgInput, (err) => {
+    err ? console.log(err) : console.log("Generated logo.svg");
+  });
 
 }
 
